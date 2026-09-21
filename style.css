@@ -1,107 +1,43 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+    --cor-fundo: #01080E ;
+    --cor-principal: #0B0D20 ;
+    --cor-secundaria: #212333; 
+    --cor-destaque: #2BDEFD;
+    --cor-texto: #D7F9FF;
+
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e3a8a);
-    min-height: 100vh;
-
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     display: flex;
     justify-content: center;
     align-items: center;
-
-    padding: 20px;
+    min-height: 100vh;
 }
 
-.caixa-principal {
-    background-color: white;
-    width: 100%;
-    max-width: 700px;
-
-    padding: 40px;
-    border-radius: 20px;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-h1 {
+.caixa-principal{
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 600px;
     text-align: center;
-    color: #1e3a8a;
-    margin-bottom: 30px;
-    font-size: 32px;
-}
-
-.caixa-perguntas {
-    font-size: 22px;
-    font-weight: bold;
-    color: #222;
-
-    margin-bottom: 25px;
-    line-height: 1.5;
-}
-
-.caixa-alternativas {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.caixa-alternativas button {
-    background-color: #2563eb;
-    color: white;
-
-    border: none;
-    border-radius: 40px;
-
-    padding: 30px 40px;
-
-    font-size: 16px;
-    text-align: left;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.caixa-alternativas button:hover {
-    background-color: #1d4ed8;
-    transform: translateY(-2px);
-}
-
-.caixa-resultado {
-    margin-top: 25px;
     padding: 20px;
-
-    background-color: #eff6ff;
-    border-radius: 10px;
-
-    color: #1e3a8a;
-    line-height: 1.6;
-
-    display: none;
 }
 
-.texto-resultado {
-    font-size: 18px;
+h1{
+    color: var(--cor-destaque);
 }
 
-@media (max-width: 600px) {
-    .caixa-principal {
-        padding: 25px;
-    }
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    transition: background-color 0.3s;
+}
 
-    h1 {
-        font-size: 25px;
-    }
-
-    .caixa-perguntas {
-        font-size: 18px;
-    }
-
-    .caixa-alternativas button {
-        font-size: 15px;
-    }
+button:hover{
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
 }
